@@ -35,6 +35,6 @@
     }
   ],
   "env": {
-    "NEXT_PUBLIC_API_BASE_URL": "@credscope-api-url"
+    "NEXT_PUBLIC_API_BASE_URL": "https://credscope-backend.onrender.com"
   }
 }
