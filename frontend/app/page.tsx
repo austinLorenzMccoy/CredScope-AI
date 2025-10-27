@@ -181,8 +181,27 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2025 CredScope AI. All rights reserved.</p>
+          <div className="border-t border-border pt-8">
+            <div className="flex flex-col items-center gap-4 mb-6">
+              <p className="text-xs text-muted-foreground">Proudly built for</p>
+              <a 
+                href="https://www.zenithbank.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-6 py-3 rounded-lg border border-border bg-white hover:shadow-md transition-all group"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-red-700 rounded flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">Z</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="font-semibold text-foreground text-sm group-hover:text-primary transition-colors">Zenith Bank</div>
+                    <div className="text-xs text-muted-foreground">Zecathon 5.0 Hackathon</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <p className="text-center text-sm text-muted-foreground">© 2025 CredScope AI. All rights reserved.</p>
           </div>
         </div>
       </footer>
