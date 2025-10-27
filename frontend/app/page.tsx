@@ -4,7 +4,7 @@ import { Navbar } from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Zap, Shield, Eye, BarChart3 } from "lucide-react"
+import { ArrowRight, Zap, Shield, Eye, BarChart3, CheckCircle2, Lock, Globe, Coins } from "lucide-react"
 
 export default function Home() {
   return (
@@ -42,7 +42,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            CredScope AI transforms informal digital activity into reliable, explainable credit insights. Empowering
+            CredScope AI transforms informal digital activity into reliable, explainable credit insights with compliant on-chain trust credentials. Empowering
             financial inclusion for millions of underbanked SMEs across Africa.
           </p>
 
@@ -108,7 +108,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Why CredScope AI?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Powered by Groq AI, Graph Neural Networks, and NLP — designed for African financial inclusion
+              Powered by Groq AI, Compliant Blockchain, and Explainable AI — designed for African financial inclusion
             </p>
           </div>
 
@@ -116,21 +116,21 @@ export default function Home() {
             {[
               {
                 icon: Eye,
-                title: "Alternative Data Insights",
+                title: "Compliant Trust Credentials",
                 description:
-                  "Analyze mobile money transactions, WhatsApp Business chats, and POS data to identify spending stability and customer satisfaction.",
+                  "Mint portable, utility-token credit identities on Polygon ID/Stacks Private (non-tradable, CBN sandbox approved). Your credit score travels with you.",
               },
               {
                 icon: Shield,
-                title: "Explainable AI",
+                title: "AI Fairness Dashboard",
                 description:
-                  "Every credit decision is transparent with SHAP explanations. Understand exactly why a score was generated with detailed AI insights.",
+                  "Bias detection and audit tools for regulators. Every credit decision is transparent with SHAP explanations and fairness metrics.",
               },
               {
                 icon: Zap,
-                title: "Privacy-First Design",
+                title: "Licensed Stablecoin Rewards",
                 description:
-                  "Your data is protected with federated learning and anonymization. Trust and security by default.",
+                  "Earn fiat-backed USDC/NGN-token rewards for sharing anonymized data. Licensed, audited, and compliant with CBN regulations.",
               },
             ].map((feature, i) => {
               const Icon = feature.icon
@@ -154,6 +154,115 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Compliance & Technology Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-primary/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full mb-6 border border-secondary/20">
+              <CheckCircle2 size={16} className="text-secondary" />
+              <span className="text-sm font-medium text-secondary">Nigerian Compliance Ready</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">Built for Compliance & Scale</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              CredScope AI meets Nigerian regulatory standards while delivering cutting-edge technology
+            </p>
+          </div>
+
+          {/* Compliance Features */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="p-6 rounded-2xl border border-primary/20 bg-white hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Lock size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">KYC/AML Integration</h3>
+                  <p className="text-muted-foreground mb-3">CBN-licensed aggregators (VerifyMe, SmileID) + Chainalysis KYT for risk monitoring</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">VerifyMe API</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">SmileID</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Chainalysis</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl border border-secondary/20 bg-white hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                  <Globe size={24} className="text-secondary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Permissioned Blockchain</h3>
+                  <p className="text-muted-foreground mb-3">Utility tokens (non-tradable) on Polygon ID / Stacks Private Chain - CBN sandbox approved</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Polygon ID</span>
+                    <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Stacks Private</span>
+                    <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Zero-Knowledge</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl border border-accent/20 bg-white hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Coins size={24} className="text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Licensed Stablecoin Rewards</h3>
+                  <p className="text-muted-foreground mb-3">Fiat-backed USDC/NGN-token via audited Nigerian partners with bank custodianship</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">USDC</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">NGN-Token</span>
+                    <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Fiat-Backed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl border border-primary/20 bg-white hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Shield size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Data Protection</h3>
+                  <p className="text-muted-foreground mb-3">NDPA compliant with federated learning, anonymization, and full audit logs for SEC/CBN</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">NDPA</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Federated ML</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Audit Ready</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tech Stack */}
+          <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-8 border border-border/50">
+            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Technology Stack</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { name: "Groq API", desc: "<100ms inference" },
+                { name: "FastAPI", desc: "Python backend" },
+                { name: "PostgreSQL", desc: "Data storage" },
+                { name: "Polygon ID", desc: "Trust credentials" },
+                { name: "TensorFlow", desc: "Federated ML" },
+                { name: "SHAP/LIME", desc: "Explainable AI" },
+                { name: "VerifyMe", desc: "KYC/AML" },
+                { name: "Chainalysis", desc: "Risk monitoring" },
+              ].map((tech, i) => (
+                <div key={i} className="p-4 bg-white rounded-xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
+                  <p className="font-semibold text-foreground mb-1">{tech.name}</p>
+                  <p className="text-xs text-muted-foreground">{tech.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5" />
@@ -167,7 +276,7 @@ export default function Home() {
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">Ready to unlock credit access?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join thousands of African SMEs getting fair, AI-powered credit scores. Helping banks finance the unseen.
+            Join thousands of African SMEs getting fair, AI-powered credit scores with blockchain-verified trust credentials. Helping banks finance the unseen.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all">
